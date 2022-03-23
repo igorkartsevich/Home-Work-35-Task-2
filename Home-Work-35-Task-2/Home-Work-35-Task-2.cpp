@@ -10,6 +10,7 @@ int main()
     auto make_ptr = [](std::vector<int> inData) {
         std::unordered_multiset<int> set (inData.begin(), inData.end());
         std::cout << set.count(3);
+
         std::vector<int> vec_unique;
         std::unique_copy(set.begin(), set.end(), back_inserter(vec_unique));
         return std::make_unique<std::vector<int>> (vec_unique);
