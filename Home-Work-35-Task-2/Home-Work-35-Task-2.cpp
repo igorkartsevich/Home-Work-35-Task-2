@@ -18,7 +18,9 @@ int main()
             set.insert(element);
         }
 
-        return std::make_unique<std::unordered_set<int>> (set);
+        std::vector<int> vec_unique(set.begin(), set.end());
+
+        return std::make_unique<std::vector<int>> (vec_unique);
     };
 
     auto ptr = make_ptr(data);
